@@ -1,0 +1,37 @@
+body {
+    background-color: turquoise; /* Set the background color to turquoise */
+    color: navy; /* Set the font color to navy */
+}
+
+/* Child Combinator (>): Special styling for chapter titles */
+.chapter > h2 {
+    color: gold;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Descendant Combinator ( ): Aura for each spell */
+.chapter .spell {
+    background-color: black; /* Black aura */
+    border: 2px solid gold; /* Gold border */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Adjacent Sibling Combinator (+): Connection between spell headers and descriptions */
+.spell h3 + p {
+    transition: all 0.3s ease-in-out;
+    color: black; /* Set the font color of the paragraph to black */
+}
+
+.spell h3:hover + p {
+    color: darkturquoise;
+    font-weight: bold;
+}
+
+/* General Sibling Combinator (~): Unique charm for each spell's description */
+.spell h3 ~ p {
+    text-indent: 20px;
+    font-style: italic; color: turquoise;
+    font-weight: bold;
+}
